@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/afe9f07e6e.js" crossorigin="anonymous"></script>
+
+    <title>Eindproject</title>
+
+{% do craft.app.view.registerCssFile('@web/styles/reset.css') %}
+{% do craft.app.view.registerCssFile('@web/styles/style.css?') %}
+
+
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="img/Schermafbeelding 2023-12-19 190743.png" alt="">
+        </div>
+        <div>
+            <a href="index.html">Shop</a>
+            <a href="clubs.html">Club in de kijker</a>
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+        </div>
+    </nav>
+    
+{% block content %}
+{# hier komt de content#}
+{% endblock %}
