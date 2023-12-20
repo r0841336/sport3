@@ -1,0 +1,227 @@
+nav{
+    background-color: #ffa015;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+nav div img {
+    width: 20%;
+}
+
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    padding: 20px;
+
+}
+
+.title{
+    font-size: 26px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px; 
+    padding: 10px;
+    border: 1px solid #bdbdbd;
+    width: 200px; 
+}
+
+.product img {
+    max-width: 100%; 
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product p {
+    margin: 5px;
+}
+
+.product a {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+
+
+.productdetail{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.productdetail img{
+    width: 300px;
+}
+
+
+.productdetail .merk{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.productdetail .doelgroep{
+    display: inline;
+    border: 0.5px solid grey;
+    padding: 5px 20px;
+}
+
+.productdetail .prijs{
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.productdetail a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.productdetail h3{
+    text-align: left;
+    margin-left: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.productdetail .beschrijving{
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+.club img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.club h3 {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: #333;
+}
+
+.club p {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #555;
+}
+
+.club a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+
+}
+
+.extra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.extra img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.extra h3 {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.extra p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.extern .website {
+    display: block;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #ffa015;
+    color: white;
+    text-decoration: none;
+    border-radius: 0px;
+
+}
+
+
+
+@media(min-width: 800px){
+
+    nav {
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav div {
+        margin-left: auto;
+    }
+
+    .productdetail{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .productdetail .beschrijving{
+        margin-right: 20px;
+    }
+
+    .extra {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        margin: 20px;
+    }
+    
+}
