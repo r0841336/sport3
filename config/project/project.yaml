@@ -1,0 +1,22 @@
+dateModified: 1703076296
+email:
+  fromEmail: r0841336@student.thomasmore.be
+  fromName: sport3
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    11b80262-63f8-4d25-97a5-994fa355740a: sport3 # sport3
+    bf54c795-76da-4077-9532-eaf5d87fbf0d: Common # Common
+    e2404658-cbb7-4595-aa8c-90ec9a0f48c4: sport3 # sport3
+system:
+  edition: solo
+  live: true
+  name: sport3
+  schemaVersion: 4.5.3.0
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: sport3
+primary: true
+siteGroup: e2404658-cbb7-4595-aa8c-90ec9a0f48c4 # sport3
+sortOrder: 1
