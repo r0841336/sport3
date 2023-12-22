@@ -1,24 +1,41 @@
 {% extends "_layout" %}
-    
 
 {% block content %}
     
     <div class="title">
-    <h2>Our products</h2>
-</div>
+        <h2>Our products</h2>
+    </div>
 
-<div class="products">
+    <div class="products">
+
+        {% set entries = craft.entries().section('products').all() %}
+
+        {% for entry in entries %}
+
+{% set categories = craft.entries().section('storeCategories').all() %}
+<div class="plugin-categories">
+{% for cat in categories %}
+<label><input type ="checkbox" name="{{cat}}"/>{{cat}}</label>
+{% endfor %}
 
 
+            <div class="product">
 
-<div class="product">
-    <img src="img/Youth_Football_Helmet_Red_1500x.webp" alt="">
-    <p>Riddle speedflex helm</p>
-    <p>youth</p>
-    <p>€375,00</p>
-    <a href="detail.html">kom meer te weten</a>
-    <a href="#"> voeg toe aan winkelwagen</a>
-</div>
+        <img src="{{ entry.productImg }}" alt="{{ entry.productTitle }}">
 
+               <p>{{ entry.productTitle}}</p> 
+                {# Loop door de categorieën van het product #}
+                {% for category in entry.categories %}
+                    <span>{{ category.title }}</span>
+                {% endfor %}
+
+                <p>€ {{ entry.price}}</p>
+
+                <a href="detail.html">kom meer te weten</a>
+                <a href="#">voeg toe aan winkelwagen</a>
+            </div>
+        {% endfor %}
+
+    </div>
 
 {% endblock %}
