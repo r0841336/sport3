@@ -1,13 +1,42 @@
-dateModified: 1703076296
+dateModified: 1703347446
 email:
   fromEmail: r0841336@student.thomasmore.be
   fromName: sport3
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  productImg:
+    hasUrls: true
+    name: 'product img'
+    settings:
+      path: '@webroot/assets/uploads/products'
+    type: craft\fs\Local
+    url: '@web/assets/uploads/products'
 meta:
   __names__:
+    2a1815f7-bda6-47fa-af94-682d004509d0: 'product img' # product img
+    4e8a8ec5-5b8a-4ac2-b8db-678032a47e01: 'full text' # full text
+    7e16a614-78d9-471e-917b-abe507c11b5a: price # price
     11b80262-63f8-4d25-97a5-994fa355740a: sport3 # sport3
+    736af702-524f-4e78-847e-7edf2f0595e7: 'rich text' # rich text
+    5610c9a1-7afd-4071-8aca-8bf801c18969: 'product title' # product title
+    6816eada-9eb4-404e-917c-c59bbc6e17b1: categories # categories
+    ac853a6f-501e-420a-a07a-3288a2258f88: Default # Default
     bf54c795-76da-4077-9532-eaf5d87fbf0d: Common # Common
+    c5918ac8-3aed-4cef-ae42-6b35a5ee1e2f: 'banner img' # banner img
+    dcc170b2-19fa-44b3-9c99-1212a6613636: products # products
+    e7aea88a-0655-43ca-81f5-9d6250b58f57: Default # Default
     e2404658-cbb7-4595-aa8c-90ec9a0f48c4: sport3 # sport3
+    eba129b7-7efe-47d0-af12-44808f369268: 'store Categories' # store Categories
+    f8471dab-3dca-491c-b8c8-2ccb9eaa46da: 'product img' # product img
+plugins:
+  abm-tinymce:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  element-api:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true

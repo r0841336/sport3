@@ -6,76 +6,63 @@
         <h2>Our products</h2>
     </div>
 
-
-        {% set categories = craft.entries().section('storeCategories').all() %}
-            <div class="product-categories">
+    {% set categories = craft.entries().section('storeCategories').all() %}
+    <div class="product-categories">
         {% for cat in categories %}
-            <label><input type ="checkbox" name="{{cat.slug}}"/>{{cat.title}}</label>
-    {% endfor %}
-
+            <label><input type="checkbox" name="{{ cat.slug }}" />{{ cat.title }}</label>
+        {% endfor %}
+    </div>
 
     <div class="products">
-            {% set entries = craft.entries().section('products').all() %}
-
+        {% set entries = craft.entries().section('products').all() %}
         {% for entry in entries %}
+            <div class="product" data-categories="{{ entry.categories ? entry.categories|join(',') : '' }}">
+                <p>{{ entry.productTitle }}</p> 
+                
+                {% if entry.categories|length %}
+                    {% for categorie in entry.categories %}
+                        {{ categorie.title }}
+                    {% endfor %}
+                {% endif %}
 
-            <div class="product">
-
-               <p>{{ entry.productTitle}}</p> 
-
-        {% for categorie in entry.categories %}
-        {{categorie}}
-        {% endfor %}
-
-
-                <p>€ {{ entry.price}}</p>
-
-                <a href="detail.html">kom meer te weten</a>
+                <p>€ {{ entry.price }}</p>
+                <a href="{{ entry.url }}">kom meer te weten</a>
                 <a href="#">voeg toe aan winkelwagen</a>
             </div>
         {% endfor %}
-
     </div>
 
     <script>
-    let selectedCategories = [];
+        let selectedCategories = [];
  
-    document.querySelectorAll(".product-categories input").forEach((element) => {
-      element.addEventListener("change", onSelectCategory);
-    });
+        document.querySelectorAll(".product-categories input").forEach((element) => {
+            element.addEventListener("change", onSelectCategory);
+        });
  
- 
-    function onSelectCategory(e) {
-      console.log("change");
-      if (selectedCategories.includes(this.name)) {
-        let index = selectedCategories.indexOf(this.name);
-        selectedCategories.splice(index, 1);
-      }
-      else {
-        selectedCategories.push(this.name);
-      }
-      console.log(selectedCategories);
-      updateGrid();
-    }
- 
-    function updateGrid() {
-      console.log("updateGrid");
-      document.querySelectorAll(".products .product").forEach((el) => {
-        el.style.display = "none";
-        // console.log(selectedCategories);
-        for (let i = 0; i < selectedCategories.length; i++) {
-          // console.log(el.hasAttribute("data-" + selectedCategories[i]));
-          if (el.hasAttribute("data-" + selectedCategories[i])) {
-            el.style.display = "block";
-          }
+        function onSelectCategory(e) {
+            if (selectedCategories.includes(this.name)) {
+                let index = selectedCategories.indexOf(this.name);
+                selectedCategories.splice(index, 1);
+            } else {
+                selectedCategories.push(this.name);
+            }
+            updateGrid();
         }
-        if (selectedCategories.length == 0) {
-          el.style.display = "block";
+ 
+        function updateGrid() {
+            document.querySelectorAll(".products .product").forEach((el) => {
+                el.style.display = "none";
+                let dataCategories = el.getAttribute("data-categories").split(',');
+                for (let i = 0; i < selectedCategories.length; i++) {
+                    if (dataCategories.includes(selectedCategories[i])) {
+                        el.style.display = "block";
+                    }
+                }
+                if (selectedCategories.length == 0) {
+                    el.style.display = "block";
+                }
+            });
         }
-      });
-    }
-  </script>
+    </script>
 
 {% endblock %}
-
-
