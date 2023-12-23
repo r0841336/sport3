@@ -6,28 +6,27 @@
         <h2>Our products</h2>
     </div>
 
-    <div class="products">
 
-        {% set entries = craft.entries().section('products').all() %}
+        {% set categories = craft.entries().section('storeCategories').all() %}
+            <div class="product-categories">
+        {% for cat in categories %}
+            <label><input type ="checkbox" name="{{cat.slug}}"/>{{cat.title}}</label>
+    {% endfor %}
+
+
+    <div class="products">
+            {% set entries = craft.entries().section('products').all() %}
 
         {% for entry in entries %}
 
-{% set categories = craft.entries().section('storeCategories').all() %}
-<div class="plugin-categories">
-{% for cat in categories %}
-<label><input type ="checkbox" name="{{cat}}"/>{{cat}}</label>
-{% endfor %}
-
-
             <div class="product">
 
-        <img src="{{ entry.productImg }}" alt="{{ entry.productTitle }}">
-
                <p>{{ entry.productTitle}}</p> 
-                {# Loop door de categorieën van het product #}
-                {% for category in entry.categories %}
-                    <span>{{ category.title }}</span>
-                {% endfor %}
+
+        {% for categorie in entry.categories %}
+        {{categorie}}
+        {% endfor %}
+
 
                 <p>€ {{ entry.price}}</p>
 
@@ -38,4 +37,45 @@
 
     </div>
 
+    <script>
+    let selectedCategories = [];
+ 
+    document.querySelectorAll(".product-categories input").forEach((element) => {
+      element.addEventListener("change", onSelectCategory);
+    });
+ 
+ 
+    function onSelectCategory(e) {
+      console.log("change");
+      if (selectedCategories.includes(this.name)) {
+        let index = selectedCategories.indexOf(this.name);
+        selectedCategories.splice(index, 1);
+      }
+      else {
+        selectedCategories.push(this.name);
+      }
+      console.log(selectedCategories);
+      updateGrid();
+    }
+ 
+    function updateGrid() {
+      console.log("updateGrid");
+      document.querySelectorAll(".products .product").forEach((el) => {
+        el.style.display = "none";
+        // console.log(selectedCategories);
+        for (let i = 0; i < selectedCategories.length; i++) {
+          // console.log(el.hasAttribute("data-" + selectedCategories[i]));
+          if (el.hasAttribute("data-" + selectedCategories[i])) {
+            el.style.display = "block";
+          }
+        }
+        if (selectedCategories.length == 0) {
+          el.style.display = "block";
+        }
+      });
+    }
+  </script>
+
 {% endblock %}
+
+
