@@ -5,19 +5,28 @@
     <div class="title">
         <h2>Our products</h2>
     </div>
-
+              <div class="categories">
     {% set categories = craft.entries().section('storeCategories').all() %}
     <div class="product-categories">
         {% for cat in categories %}
-            <label><input type="checkbox" name="{{ cat.slug }}" />{{ cat.title }}</label>
+            <label ><input type="checkbox" name="{{ cat.slug }}" />{{ cat.title }}</label>
         {% endfor %}
+            </div>
     </div>
 
     <div class="products">
         {% set entries = craft.entries().section('products').all() %}
         {% for entry in entries %}
+
+
+
             <div class="product" data-categories="{{ entry.categories ? entry.categories|join(',') : '' }}">
+
+                <img src="{{entry.productImg.one().url('productImg')}}" alt="">
+
+
                 <p>{{ entry.productTitle }}</p> 
+
                 
                 {% if entry.categories|length %}
                     {% for categorie in entry.categories %}
@@ -26,7 +35,7 @@
                 {% endif %}
 
                 <p>€ {{ entry.price }}</p>
-                <a href="{{ entry.url }}">kom meer te weten</a>
+                <a href="products/{{ entry.slug }}">kom meer te weten</a>
                 <a href="#">voeg toe aan winkelwagen</a>
             </div>
         {% endfor %}
