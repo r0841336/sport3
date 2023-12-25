@@ -19,8 +19,6 @@
         {% set entries = craft.entries().section('products').all() %}
         {% for entry in entries %}
 
-
-
             <div class="product" data-categories="{{ entry.categories ? entry.categories|join(',') : '' }}">
 
                 <img src="{{entry.productImg.one().url('productImg')}}" alt="">
@@ -37,13 +35,14 @@
 
                 <p>€ {{ entry.price }}</p>
                 <a href="products/{{ entry.slug }}">kom meer te weten</a>
-                <a href="#">voeg toe aan winkelwagen</a>
+                <a class="wagen" href="#">voeg toe aan winkelwagen</a>
             </div>
         {% endfor %}
     </div>
 
     <script>
         let selectedCategories = [];
+        
 
         document.querySelectorAll(".product-categories input").forEach((element) => {
             element.addEventListener("change", onSelectCategory);
@@ -56,11 +55,9 @@
          } else {
                 selectedCategories.push(this.name);
             }
-            this.parentElement.style.backgroundColor = this.checked ? '#ec7c26' : '';
+            this.parentElement.style.backgroundColor = this.checked ? '	#ff7f00' : '';
             updateGrid();
 
-            let filterspecs = document.querySelector(".filterspecs");
-            filterspecs.textContent = selectedCategories.join(", ");
         }
         
  
@@ -71,6 +68,7 @@
                 for (let i = 0; i < selectedCategories.length; i++) {
                     if (dataCategories.includes(selectedCategories[i])) {
                         el.style.display = "block";
+                        document.querySelector(".products").style.textAlign = "center";
                     }
                 }
                 if (selectedCategories.length == 0) {
@@ -78,6 +76,8 @@
                 }
             });
         }
+
+        
 
 
 

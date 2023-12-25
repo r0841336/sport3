@@ -23,4 +23,31 @@
         </div>
     </div>
 
+    <h3 class="meer" >Meer producten</h3>
+    <div class="products">
+        {% set entries = craft.entries().section('products').limit(4).all() %}
+        {% for entry in entries %}
+
+            <div class="product" data-categories="{{ entry.categories ? entry.categories|join(',') : '' }}">
+
+                <img src="{{entry.productImg.one().url('productImg')}}" alt="">
+
+
+                <p>{{ entry.productTitle }}</p> 
+
+                
+                {% if entry.categories|length %}
+                    {% for categorie in entry.categories %}
+                        {{ categorie.title }}
+                    {% endfor %}
+                {% endif %}
+
+                <p>€ {{ entry.price }}</p>
+                <a href="{{ entry.slug }}">kom meer te weten</a>
+                <a href="#">voeg toe aan winkelwagen</a>
+            </div>
+        {% endfor %}
+    </div>
+    
+
         {% endblock %}
