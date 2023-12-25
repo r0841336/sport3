@@ -5,6 +5,7 @@
     <div class="title">
         <h2>Our products</h2>
     </div>
+
               <div class="categories">
     {% set categories = craft.entries().section('storeCategories').all() %}
     <div class="product-categories">
@@ -43,7 +44,7 @@
 
     <script>
         let selectedCategories = [];
- 
+
         document.querySelectorAll(".product-categories input").forEach((element) => {
             element.addEventListener("change", onSelectCategory);
         });
@@ -52,11 +53,16 @@
             if (selectedCategories.includes(this.name)) {
                 let index = selectedCategories.indexOf(this.name);
                 selectedCategories.splice(index, 1);
-            } else {
+         } else {
                 selectedCategories.push(this.name);
             }
+            this.parentElement.style.backgroundColor = this.checked ? '#ec7c26' : '';
             updateGrid();
+
+            let filterspecs = document.querySelector(".filterspecs");
+            filterspecs.textContent = selectedCategories.join(", ");
         }
+        
  
         function updateGrid() {
             document.querySelectorAll(".products .product").forEach((el) => {
@@ -72,6 +78,9 @@
                 }
             });
         }
+
+
+
     </script>
 
 {% endblock %}

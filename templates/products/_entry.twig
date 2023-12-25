@@ -11,11 +11,12 @@
 <div class="productdetail">
     <div class="detail">
     <img src="{{entry.productImg.one().url('productDetailImg')}}" alt="">
-    </div>
+    <div>
     <p class ="merk">{{ entry.productTitle }}</p> 
     <p class="prijs" >€ {{ entry.price }}</p>
+    <a href="#"> voeg toe aan winkelwagen</a>
 </div>
-
+    </div>
     <div>
         <h3>beschrijving</h3>
         <p class="beschrijving"> {{ entry.fullText }} </p>
