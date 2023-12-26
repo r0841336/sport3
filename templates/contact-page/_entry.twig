@@ -1,0 +1,46 @@
+{% extends "_layout" %}
+
+{% block content %}
+    <style>
+        body {
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .titelcontact {
+            margin-bottom: 10px;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .openings ul {
+            list-style-type: none;
+
+        }
+
+        .openings li {
+            margin-bottom: 5px;
+        }
+    </style>
+
+
+<div class="bnrimg"> 
+            <img src="{{ entry.bannerImg[0].url('banner') }}" alt="Banner Image">
+</div>
+<div class="title">
+        <h2>Contact</h2>
+    </div>
+        <div>{{ entry.richText }}</div>
+        
+<div class="title">
+        <h2>Ons adres</h2>
+    </div>
+
+
+{{ entry.kaart.address }}
+{{ entry.kaart.galaxy }}
+
+{% endblock %}

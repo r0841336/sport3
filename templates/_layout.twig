@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/afe9f07e6e.js" crossorigin="anonymous"></script>
+
+
+
 
     <title>Eindproject</title>
 
 {% do craft.app.view.registerCssFile('@web/styles/reset.css') %}
 {% do craft.app.view.registerCssFile('@web/styles/style.css?') %}
+
 
 
 </head>
@@ -20,12 +23,11 @@
         <div>
             <a href="{{siteUrl}}">Shop</a>
             <a href="{{siteUrl}}blog">Club in de kijker</a>
-            <a href="{{siteUrl}}contact">Contact</a>
+            <a href="{{siteUrl}}contact-Page">Contact</a>
         </div>
     </nav>
     
 {% block content %}
-{# hier komt de content#}
 {% endblock %}
 
 
