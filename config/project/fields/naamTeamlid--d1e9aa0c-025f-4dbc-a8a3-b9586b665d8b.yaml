@@ -1,0 +1,19 @@
+columnSuffix: drfawcfv
+contentColumnType: string(200)
+fieldGroup: bf54c795-76da-4077-9532-eaf5d87fbf0d # Common
+handle: naamTeamlid
+instructions: null
+name: 'naam teamlid'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 50
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

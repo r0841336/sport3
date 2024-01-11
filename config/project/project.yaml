@@ -1,9 +1,23 @@
-dateModified: 1703347446
+dateModified: 1704977362
 email:
   fromEmail: r0841336@student.thomasmore.be
   fromName: sport3
   transportType: craft\mail\transportadapters\Sendmail
 fs:
+  bannerImg:
+    hasUrls: true
+    name: 'banner Img'
+    settings:
+      path: '@webroot/assets/uploads/logo'
+    type: craft\fs\Local
+    url: '@web/assets/uploads/logo'
+  logo:
+    hasUrls: true
+    name: logo
+    settings:
+      path: '@webroot/assets/uploads/logo'
+    type: craft\fs\Local
+    url: '@web/assets/uploads/logo'
   productImg:
     hasUrls: true
     name: 'product img'
@@ -13,21 +27,45 @@ fs:
     url: '@web/assets/uploads/products'
 meta:
   __names__:
+    0b72464e-f816-431d-a30b-e7df165c2367: team # team
     2a1815f7-bda6-47fa-af94-682d004509d0: 'product img' # product img
     4e8a8ec5-5b8a-4ac2-b8db-678032a47e01: 'full text' # full text
     7e16a614-78d9-471e-917b-abe507c11b5a: price # price
     11b80262-63f8-4d25-97a5-994fa355740a: sport3 # sport3
+    40c3dde2-72e5-46be-b15f-2818ea96ca2f: Logo # Logo
+    73b02286-11bb-4ab5-ac60-8b5ffbd2a70f: Default # Default
+    94eed483-a3ca-4baf-a788-733f3db47cf6: Default # Default
+    389a23e5-8e26-48b6-84e3-846b233734c2: 'email adres teamlid' # email adres teamlid
+    654e8ba5-4bd8-4afc-a141-a7b4c7d3258d: Logo # Logo
     736af702-524f-4e78-847e-7edf2f0595e7: 'rich text' # rich text
+    739c91c8-f763-4299-8d36-801662e55273: Doelgroep # Doelgroep
+    995e3fa2-79e4-4d45-b6c4-1ec9290e2565: 'banner Img' # banner Img
+    1710dec5-b536-4352-96ae-6c213cd79d8c: logo # logo
+    5141fcb5-8ccb-4918-8477-06abdf520818: Default # Default
     5610c9a1-7afd-4071-8aca-8bf801c18969: 'product title' # product title
     6816eada-9eb4-404e-917c-c59bbc6e17b1: categories # categories
+    44444b51-a371-4ae8-a9c9-d1c518598663: 'contact gegevens' # contact gegevens
+    295726e8-ff36-497d-a3dc-26f780b7df4d: 'contact page' # contact page
+    a39f6d62-6d7a-48cc-8828-cadcb15ce97a: 'profiel foto' # profiel foto
+    a695fa7e-fe33-435e-9dd8-635df94ad428: profielfoto # profielfoto
     ac853a6f-501e-420a-a07a-3288a2258f88: Default # Default
+    b04de7a7-1795-4a63-af53-4cbd50b69fbb: doelgroep # doelgroep
     bf54c795-76da-4077-9532-eaf5d87fbf0d: Common # Common
     c5918ac8-3aed-4cef-ae42-6b35a5ee1e2f: 'banner img' # banner img
+    ce1b06d6-eede-4ba0-8548-4080f111d8a9: 'product detail img' # product detail img
+    d1e9aa0c-025f-4dbc-a8a3-b9586b665d8b: 'naam teamlid' # naam teamlid
+    d5d031aa-034a-47d7-9720-7952304ecc4e: 'korte eigen tekst' # korte eigen tekst
+    d7a4b940-1a16-4ce8-9c06-fc4744700f2f: kaart # kaart
     dcc170b2-19fa-44b3-9c99-1212a6613636: products # products
     e7aea88a-0655-43ca-81f5-9d6250b58f57: Default # Default
+    e9de2868-b149-4496-abec-9a499111e979: 'contact page' # contact page
+    e307dc57-4a58-4e87-bac9-c8f14f58e0f6: banner # banner
+    e7157de2-249e-4e6f-b6b0-cdcc6bb2eb41: blog # blog
+    e8869ab1-44b6-4ccb-ac29-a7d94abd5805: logo # logo
     e2404658-cbb7-4595-aa8c-90ec9a0f48c4: sport3 # sport3
     eba129b7-7efe-47d0-af12-44808f369268: 'store Categories' # store Categories
     f8471dab-3dca-491c-b8c8-2ccb9eaa46da: 'product img' # product img
+    fdcb2e8a-ce7f-427a-9b80-c5531ce84039: logo # logo
 plugins:
   abm-tinymce:
     edition: standard
@@ -37,6 +75,32 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  read-time:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      wordsPerMinute: 200
+  simplemap:
+    edition: lite
+    enabled: true
+    schemaVersion: 3.4.2
+    settings:
+      apiKey: null
+      browserApiKey: null
+      disablePopulateMissingFieldData: false
+      geoLocationAutoRedirect: false
+      geoLocationCacheDuration: 5356800
+      geoLocationService: none
+      geoLocationToken: ''
+      geoService: nominatim
+      geoToken: e2f37e1fab0feae8a1c7030ff53be6b4
+      mapTiles: openstreetmap
+      mapToken: ''
+      serverApiKey: null
+      unrestrictedApiKey: null
+      w3wEnabled: false
+      w3wToken: ''
 system:
   edition: solo
   live: true

@@ -1,0 +1,19 @@
+columnSuffix: arrfxijx
+contentColumnType: string(400)
+fieldGroup: bf54c795-76da-4077-9532-eaf5d87fbf0d # Common
+handle: emailAdresTeamlid
+instructions: null
+name: 'email adres teamlid'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 100
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

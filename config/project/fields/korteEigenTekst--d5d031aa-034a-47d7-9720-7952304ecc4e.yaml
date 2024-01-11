@@ -1,0 +1,19 @@
+columnSuffix: wsxpmiis
+contentColumnType: string(1000)
+fieldGroup: bf54c795-76da-4077-9532-eaf5d87fbf0d # Common
+handle: korteEigenTekst
+instructions: null
+name: 'korte eigen tekst'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 250
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

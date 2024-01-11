@@ -28,6 +28,7 @@ nav a{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .product {
@@ -50,6 +51,7 @@ nav a{
 .product p {
     margin: 5px;
 }
+
 
 .product a {
     display: block;
@@ -188,9 +190,43 @@ nav a{
     color: white;
     text-decoration: none;
     border-radius: 0px;
-
 }
 
+.categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+label {
+    position: relative;
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #ffa015;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+label:hover{
+    background-color: #e19614;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.meer{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 23px;
+}
 
 
 @media(min-width: 800px){
@@ -223,5 +259,6 @@ nav a{
         text-align: center;
         margin: 20px;
     }
+
     
 }

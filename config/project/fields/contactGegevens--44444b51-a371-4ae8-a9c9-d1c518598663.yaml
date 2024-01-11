@@ -1,0 +1,12 @@
+columnSuffix: eplsxbej
+contentColumnType: string
+fieldGroup: bf54c795-76da-4077-9532-eaf5d87fbf0d # Common
+handle: contactGegevens
+instructions: null
+name: 'contact gegevens'
+searchable: false
+settings:
+  placeholder: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Email

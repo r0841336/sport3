@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: team
+name: team
+propagationMethod: all
+siteSettings:
+  11b80262-63f8-4d25-97a5-994fa355740a: # sport3
+    enabledByDefault: true
+    hasUrls: true
+    template: team/_entry
+    uriFormat: 'team/{slug}'
+type: channel

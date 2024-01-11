@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: doelgroep
+name: Doelgroep
+propagationMethod: all
+siteSettings:
+  11b80262-63f8-4d25-97a5-994fa355740a: # sport3
+    enabledByDefault: true
+    hasUrls: true
+    template: doelgroep/_entry
+    uriFormat: 'doelgroep/{slug}'
+structure:
+  maxLevels: null
+  uid: 35d201e2-904c-4b98-94b9-0726e467b27b
+type: structure

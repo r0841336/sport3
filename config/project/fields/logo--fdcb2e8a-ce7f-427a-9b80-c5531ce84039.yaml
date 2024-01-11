@@ -1,0 +1,71 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: bf54c795-76da-4077-9532-eaf5d87fbf0d # Common
+handle: logo
+instructions: null
+name: logo
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds: null
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:1710dec5-b536-4352-96ae-6c213cd79d8c' # logo
+  defaultUploadLocationSubpath: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  previewMode: full
+  restrictFiles: false
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:c5918ac8-3aed-4cef-ae42-6b35a5ee1e2f' # banner img
+  restrictedLocationSubpath: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Asset
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\assets\AssetCondition
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\assets\FileSizeConditionRule
+              -
+                - uid
+                - f7acd78c-2c2f-4a85-9843-9f848517c6db
+              -
+                - operator
+                - '<'
+              -
+                - value
+                - '50'
+              -
+                - maxValue
+                - ''
+              -
+                - unit
+                - MB
+  selectionLabel: null
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources:
+    - 'volume:1710dec5-b536-4352-96ae-6c213cd79d8c' # logo
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

@@ -7,7 +7,8 @@ name: 'rich text'
 searchable: false
 settings:
   availableTransforms: ''
-  availableVolumes: ''
+  availableVolumes:
+    - c5918ac8-3aed-4cef-ae42-6b35a5ee1e2f # banner img
   columnType: text
   purifierConfig: Default.json
   purifyHtml: true

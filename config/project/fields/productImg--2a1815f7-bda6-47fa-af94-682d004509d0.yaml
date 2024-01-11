@@ -61,7 +61,8 @@ settings:
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  sources: '*'
+  sources:
+    - 'volume:c5918ac8-3aed-4cef-ae42-6b35a5ee1e2f' # banner img
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

@@ -1,0 +1,71 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: bf54c795-76da-4077-9532-eaf5d87fbf0d # Common
+handle: bannerImg
+instructions: null
+name: 'banner Img'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds: null
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:c5918ac8-3aed-4cef-ae42-6b35a5ee1e2f' # banner img
+  defaultUploadLocationSubpath: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  previewMode: full
+  restrictFiles: false
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:c5918ac8-3aed-4cef-ae42-6b35a5ee1e2f' # banner img
+  restrictedLocationSubpath: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Asset
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\assets\AssetCondition
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\assets\FileSizeConditionRule
+              -
+                - uid
+                - c1fece27-088c-4e4a-922a-39d44f1f0d95
+              -
+                - operator
+                - '<'
+              -
+                - value
+                - '80'
+              -
+                - maxValue
+                - ''
+              -
+                - unit
+                - MB
+  selectionLabel: null
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources:
+    - 'volume:c5918ac8-3aed-4cef-ae42-6b35a5ee1e2f' # banner img
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets
